@@ -80,9 +80,9 @@ Example:
 Each order gets a unique order ID using UUID logic.
 
 Example:
-
 E8F844E5
-4. Order Status Management
+
+## 4.Order Status Management
 
 Each order can have one of the following statuses:
 
@@ -93,7 +93,7 @@ DELIVERED
 
 The status can be updated from the Orders page.
 
-5. View and Filter Orders
+## 5.View and Filter Orders
 
 The system allows users to:
 
@@ -101,7 +101,8 @@ View all created orders
 Search by customer name
 Search by phone number
 Filter by order status
-6. Dashboard
+
+## 6.Dashboard
 
 The dashboard displays:
 
@@ -111,11 +112,12 @@ Orders in RECEIVED status
 Orders in PROCESSING status
 Orders in READY status
 Orders in DELIVERED status
-7. Estimated Delivery Date
+
+## 7.Estimated Delivery Date
 
 Each order automatically receives an estimated delivery date, calculated as 3 days after the order creation date.
 
-8. Multi-Page Frontend
+## 8.Multi-Page Frontend
 
 The frontend is divided into separate pages:
 
@@ -126,7 +128,7 @@ Orders	View, search, filter, and update orders
 Dashboard	View business summary
 Price List	View garment prices
 API Docs	Test APIs using Swagger UI
-9. Modern UI Design
+## 9.Modern UI Design
 
 The frontend includes:
 
@@ -158,7 +160,8 @@ GET	/orders	Lists and filters orders
 PUT	/orders/{order_id}/status	Updates order status
 GET	/dashboard	Returns dashboard data
 GET	/price-list	Returns garment price list
-Folder Structure
+
+## Folder Structure
 laundry-order-management-system/
 │
 ├── main.py
@@ -185,25 +188,27 @@ laundry-order-management-system/
     ├── dashboard.png
     ├── price-list.png
     └── api-docs.png
-Setup Instructions
+
+##Setup Instructions
 1. Clone the repository
-git clone YOUR_GITHUB_REPOSITORY_LINK
+git clone 
 cd laundry-order-management-system
 2. Create a virtual environment
 python -m venv venv
 3. Activate the virtual environment
 
 For Windows:
-
 venv\Scripts\activate
 
 For Mac/Linux:
-
 source venv/bin/activate
+
 4. Install dependencies
 pip install -r requirements.txt
+
 5. Run the project
 uvicorn main:app --reload
+
 6. Open the application
 
 Open the following URL in your browser:
@@ -235,7 +240,9 @@ The order status will be updated.
 View Dashboard
 Open the Dashboard page.
 View total orders, revenue, and status-wise order count.
-Sample Order Request
+
+
+## Sample Order Request
 {
   "customer_name": "RISHI ROY",
   "phone_number": "9593891489",
@@ -246,7 +253,7 @@ Sample Order Request
     }
   ]
 }
-Sample Order Response
+## Sample Order Response
 {
   "message": "Order created successfully",
   "order": {
@@ -267,20 +274,36 @@ Sample Order Response
     "estimated_delivery_date": "2026-04-30"
   }
 }
-Screenshots
+
+## Screenshots
 Home Page
 
+<img width="1907" height="860" alt="Screenshot 2026-04-27 131125" src="https://github.com/user-attachments/assets/260b0abd-397b-4c29-8a5a-48df720d2f71" />
+
 Create Order Page
+<img width="1808" height="801" alt="Screenshot 2026-04-27 131334" src="https://github.com/user-attachments/assets/2639146f-758a-4936-bac7-71365bf6ffe2" />
+
 
 Order Created Successfully
+<img width="1695" height="787" alt="Screenshot 2026-04-27 131351" src="https://github.com/user-attachments/assets/35da211c-5193-4d80-a138-44d9e255f257" />
+
 
 Orders Page
 
+<img width="1740" height="828" alt="Screenshot 2026-04-27 131409" src="https://github.com/user-attachments/assets/961a6d76-4b64-43bf-894e-cfb6c05e1bdf" />
+
+
 Dashboard Page
+<img width="1740" height="828" alt="Screenshot 2026-04-27 131409" src="https://github.com/user-attachments/assets/5b784879-f762-4dfb-9841-cb0a476cba0a" />
+
 
 Price List Page
+<img width="1666" height="775" alt="Screenshot 2026-04-27 131434" src="https://github.com/user-attachments/assets/9a84877a-be55-4ed0-adfb-53d15e4caad0" />
+
 
 API Documentation
+<img width="1819" height="474" alt="Screenshot 2026-04-26 174310" src="https://github.com/user-attachments/assets/45f9459b-7ac4-494d-8236-6b3591e982cb" />
+
 
 Project Report
 
