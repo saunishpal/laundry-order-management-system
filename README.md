@@ -191,7 +191,7 @@ laundry-order-management-system/
 
 ##Setup Instructions
 1. Clone the repository
-git clone 
+git clone https://github.com/saunishpal/laundry-order-management-system.git
 cd laundry-order-management-system
 2. Create a virtual environment
 python -m venv venv
