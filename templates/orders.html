@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Orders | LaundryPro</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+
+<nav class="navbar">
+  <div class="logo">Laundry<span>Pro</span></div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/create-order">Create Order</a>
+    <a href="/orders-page" class="active">Orders</a>
+    <a href="/dashboard-page">Dashboard</a>
+    <a href="/price-list-page">Price List</a>
+  </div>
+</nav>
+
+<main class="page-container">
+  <div class="page-heading">
+    <p class="tag">Manage Orders</p>
+    <h1>All Laundry Orders</h1>
+    <p>Search orders, filter by status, and update delivery progress.</p>
+  </div>
+
+  <section class="glass-panel">
+    <div class="filter-row">
+      <input type="text" id="searchInput" placeholder="Search by customer name or phone">
+      
+      <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="RECEIVED">RECEIVED</option>
+        <option value="PROCESSING">PROCESSING</option>
+        <option value="READY">READY</option>
+        <option value="DELIVERED">DELIVERED</option>
+      </select>
+
+      <button class="btn-secondary" onclick="loadOrders()">Search</button>
+    </div>
+  </section>
+
+  <div class="order-count-bar">
+    <h2>Orders</h2>
+    <span id="orderCount">0 Orders</span>
+  </div>
+
+  <section id="orders" class="orders-list"></section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/script.js"></script>
+<script>
+  loadOrders();
+</script>
+</body>
+</html>

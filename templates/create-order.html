@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Order | LaundryPro</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+
+<nav class="navbar">
+  <div class="logo">Laundry<span>Pro</span></div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/create-order" class="active">Create Order</a>
+    <a href="/orders-page">Orders</a>
+    <a href="/dashboard-page">Dashboard</a>
+    <a href="/price-list-page">Price List</a>
+  </div>
+</nav>
+
+<main class="page-container">
+  <div class="page-heading">
+    <p class="tag">New Laundry Request</p>
+    <h1>Create Order</h1>
+    <p>Add customer details and garment information. The system will calculate the bill automatically.</p>
+  </div>
+
+  <section class="glass-panel form-panel">
+    <div class="form-grid">
+      <div class="input-group">
+        <label>Customer Name</label>
+        <input type="text" id="customerName" placeholder="Enter customer name">
+      </div>
+
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="text" id="phoneNumber" placeholder="Enter phone number">
+      </div>
+
+      <div class="input-group">
+        <label>Garment Type</label>
+        <select id="garment">
+          <option value="shirt">Shirt - ₹50</option>
+          <option value="pants">Pants - ₹70</option>
+          <option value="saree">Saree - ₹120</option>
+          <option value="kurta">Kurta - ₹80</option>
+          <option value="coat">Coat - ₹200</option>
+          <option value="bedsheet">Bedsheet - ₹150</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Quantity</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+      </div>
+    </div>
+
+    <button class="btn-primary full-btn" onclick="createOrder()">Create Order</button>
+
+    <div id="createdOrderBox" class="success-box hidden"></div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

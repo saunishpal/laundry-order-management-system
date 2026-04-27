@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Laundry Order Management System</title>
+
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+
+<body>
+  <div class="background-blur blur-one"></div>
+  <div class="background-blur blur-two"></div>
+
+  <div class="app-shell">
+
+    <header class="hero">
+      <div>
+        <p class="eyebrow">AI-First Assignment Project</p>
+        <h1>Mini Laundry Order Management System</h1>
+        <p class="subtitle">
+          Create laundry orders, calculate bills, track delivery status, and view live dashboard insights.
+        </p>
+      </div>
+
+      <div class="hero-card">
+        <span class="hero-icon">🧺</span>
+        <p>Smart Laundry Desk</p>
+        <h3>Fast • Simple • Clean</h3>
+      </div>
+    </header>
+
+    <main class="grid-layout">
+
+      <section class="panel create-panel">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">New Order</p>
+            <h2>Create Laundry Order</h2>
+          </div>
+          <span class="floating-badge">Auto Billing</span>
+        </div>
+
+        <div class="form-grid">
+          <div class="input-group">
+            <label>Customer Name</label>
+            <input type="text" id="customerName" placeholder="Enter customer name" />
+          </div>
+
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="text" id="phoneNumber" placeholder="Enter phone number" />
+          </div>
+
+          <div class="input-group">
+            <label>Garment Type</label>
+            <select id="garment">
+              <option value="shirt">Shirt - ₹50</option>
+              <option value="pants">Pants - ₹70</option>
+              <option value="saree">Saree - ₹120</option>
+              <option value="kurta">Kurta - ₹80</option>
+              <option value="coat">Coat - ₹200</option>
+              <option value="bedsheet">Bedsheet - ₹150</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Quantity</label>
+            <input type="number" id="quantity" placeholder="Qty" min="1" />
+          </div>
+        </div>
+
+        <button class="primary-btn" onclick="createOrder()">
+          <span>＋</span> Create Order
+        </button>
+      </section>
+
+      <section class="panel dashboard-panel">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Live Stats</p>
+            <h2>Dashboard</h2>
+          </div>
+        </div>
+
+        <div id="dashboard" class="dashboard-grid"></div>
+      </section>
+
+      <section class="panel filter-panel">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Find Orders</p>
+            <h2>Search & Filter</h2>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <input type="text" id="searchInput" placeholder="Search by name or phone" />
+
+          <select id="statusFilter">
+            <option value="">All Status</option>
+            <option value="RECEIVED">RECEIVED</option>
+            <option value="PROCESSING">PROCESSING</option>
+            <option value="READY">READY</option>
+            <option value="DELIVERED">DELIVERED</option>
+          </select>
+
+          <button class="secondary-btn" onclick="loadOrders()">Search</button>
+        </div>
+      </section>
+
+      <section class="panel orders-panel">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Order List</p>
+            <h2>All Laundry Orders</h2>
+          </div>
+          <span id="orderCount" class="floating-badge">0 Orders</span>
+        </div>
+
+        <div id="orders" class="orders-list"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

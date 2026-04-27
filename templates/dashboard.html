@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | LaundryPro</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+
+<nav class="navbar">
+  <div class="logo">Laundry<span>Pro</span></div>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/create-order">Create Order</a>
+    <a href="/orders-page">Orders</a>
+    <a href="/dashboard-page" class="active">Dashboard</a>
+    <a href="/price-list-page">Price List</a>
+  </div>
+</nav>
+
+<main class="page-container">
+  <div class="page-heading">
+    <p class="tag">Business Insights</p>
+    <h1>Dashboard</h1>
+    <p>Track total revenue, total orders, and order status distribution.</p>
+  </div>
+
+  <section id="dashboard" class="dashboard-grid"></section>
+
+  <section class="glass-panel info-panel">
+    <h2>System Overview</h2>
+    <p>
+      This dashboard gives a quick business summary for the dry-cleaning store.
+      Revenue is calculated from all created orders, and order status counts are updated live.
+    </p>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/script.js"></script>
+<script>
+  loadDashboard();
+</script>
+</body>
+</html>
